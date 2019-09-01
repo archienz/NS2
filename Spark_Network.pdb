@@ -1,0 +1,11 @@
+outputFile = "Spark_Network_cpp.cpp";
+if (parser.has("cpp"))
+{
+    // Open the cpp file
+    str = parser.get<String>("cpp");
+    ifstream ifile(str);
+    if (!ifile) throw("error");
+    cap.open(str);
+    str.replace(str.end()-4, str.end(), "Spark_Network.cpp");
+    outputFile = str;
+}
